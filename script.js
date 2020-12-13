@@ -214,7 +214,7 @@ let render = () => {
 		ctx.stroke();
 		ctx.closePath();
 
-
+/*
 		ctx.beginPath();
 		
 		ctx.arc(canvas.width - 449, canvas.height - 298, 0.8, 0, 2 * Math.PI);
@@ -230,7 +230,7 @@ let render = () => {
 		ctx.arc(canvas.width - 447 - (10 * 3), canvas.height - 298, 0.8, 0, 2 * Math.PI);
 
 		ctx.fill();
-		ctx.closePath();
+		ctx.closePath();*/
 	}
 
 
@@ -241,13 +241,13 @@ let render = () => {
 		drawKm(canvas.width - 483 + 40 - 6.5 * 2, canvas.height - 335 + 75);
 	}
 
-
-
-	if (steps.includes("emasz_km")) {
+	if (steps.includes("meretlek_vezetek_osszekotes")) {
+/*
 		//Kék méretlen vezeték
 		ctx.beginPath();
 
 		ctx.strokeStyle = KEK;
+		ctx.lineWidth = 1;
 		ctx.moveTo(canvas.width - 400, canvas.height - 240 - 3);
 		ctx.lineTo(canvas.width - 440, canvas.height - 240 - 3);
 		ctx.lineTo(canvas.width - 440, canvas.height - 280 - 3);
@@ -256,10 +256,12 @@ let render = () => {
 
 		ctx.stroke();
 		ctx.closePath();
-
+*/
+/*
 		//Szürke méretlen vezeték KM előtt
 		ctx.beginPath();
 
+		ctx.lineWidth = 1;
 		ctx.strokeStyle = SZURKE;
 		ctx.moveTo(canvas.width - 445.5, canvas.height - 244.5);
 		ctx.lineTo(canvas.width - 445.5, canvas.height - 240);
@@ -267,22 +269,24 @@ let render = () => {
 
 		ctx.stroke();
 		ctx.closePath();
-
+*/
 		//Szürke méretlen vezeték KM után
 		ctx.beginPath();
 
+		ctx.lineWidth = 1;
 		ctx.strokeStyle = SZURKE;
 		ctx.moveTo(canvas.width - 483 + 37.5, canvas.height - 335 + 74.5);
-		ctx.lineTo(canvas.width - 483 + 37.5, canvas.height - 280);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5, canvas.height - 280);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5, canvas.height - 294.5);
+		ctx.lineTo(canvas.width - 483 + 37.5, canvas.height - 294.5);//280);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5, canvas.height - 280);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5, canvas.height - 294.5);
 
 		ctx.stroke();
 		ctx.closePath();
-
+/*
 		//Barna méretlen vezeték KM előtt
 		ctx.beginPath();
 
+		ctx.lineWidth = 1;
 		ctx.strokeStyle = BARNA;
 		ctx.moveTo(canvas.width - 452, canvas.height - 244.5);
 		ctx.lineTo(canvas.width - 452, canvas.height - 240 + (3 * 1));
@@ -291,52 +295,73 @@ let render = () => {
 		ctx.stroke();
 		ctx.closePath();
 
-
+*/
 		//Barna méretlen vezeték KM után
 		ctx.beginPath();
 
+		ctx.lineWidth = 1;
 		ctx.strokeStyle = BARNA;
 		ctx.moveTo(canvas.width - 483 + 37.5 - 6.5, canvas.height - 335 + 74.5);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 6.5, canvas.height - 275);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 11, canvas.height - 275);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 11, canvas.height - 294.5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 6.5, canvas.height - 294.5);//275);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 11, canvas.height - 275);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 11, canvas.height - 294.5);
 
 		ctx.stroke();
 		ctx.closePath();
 
+/*
 
-		//SOTET méretlen vezeték KM előt
+		//SOTET méretlen vezeték KM előtt
 		ctx.beginPath();
 
 		ctx.strokeStyle = SOTET;
+		ctx.lineWidth = 1;
 		ctx.moveTo(canvas.width - 458.5, canvas.height - 244.5);
 		ctx.lineTo(canvas.width - 458.5, canvas.height - 240 + (3 * 2));
 		ctx.lineTo(canvas.width - 400, canvas.height - 240 + (3 * 2));
 
 		ctx.stroke();
 		ctx.closePath();
-
+*/
 
 		//SOTET méretlen vezeték KM után
 		ctx.beginPath();
 
 		ctx.strokeStyle = SOTET;
+		ctx.lineWidth = 1;
 		ctx.moveTo(canvas.width - 483 + 37.5 - 6.5 * 2, canvas.height - 335 + 74.5);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 6.5 * 2, canvas.height - 270);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 21, canvas.height - 270);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 21, canvas.height - 294.5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 6.5 * 2, canvas.height - 294.5);//270);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 21, canvas.height - 270);
+		//ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 21, canvas.height - 294.5);
 
 		ctx.stroke();
 		ctx.closePath();
+	}
+
+
+	if (steps.includes("mert_vezetek_osszekotes")) {
+		ctx.lineWidth = 1;
+		//Kék mért vezeték
+		ctx.beginPath();
+
+		ctx.strokeStyle = KEK;
+		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 + 1, canvas.height - 170);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 + 1, canvas.height - 172-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 7, canvas.height - 172-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 7, canvas.height - 280);
+
+		ctx.stroke();
+		ctx.closePath();
+
 
 		//SOTET mért vezeték
 		ctx.beginPath();
 
 		ctx.strokeStyle = SOTET;
-		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 - 18, canvas.height - 294.5);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 18, canvas.height - 190);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 14, canvas.height - 190);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 14, canvas.height - 170);
+		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 - 14, canvas.height - 170);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 14, canvas.height - 174-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 5, canvas.height - 174-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 5, canvas.height - 280);
 
 		ctx.stroke();
 		ctx.closePath();
@@ -345,12 +370,11 @@ let render = () => {
 		ctx.beginPath();
 
 		ctx.strokeStyle = BARNA;
-		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 - 8, canvas.height - 294.5);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 8, canvas.height - 290);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 15, canvas.height - 290);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 15, canvas.height - 192);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 5.5, canvas.height - 192);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 5.5, canvas.height - 170);
+		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 - 5.5, canvas.height - 170);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 5.5, canvas.height - 176-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 3, canvas.height - 176-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 3, canvas.height - 280);
+
 
 		ctx.stroke();
 		ctx.closePath();
@@ -359,54 +383,68 @@ let render = () => {
 		ctx.beginPath();
 
 		ctx.strokeStyle = SZURKE;
-		ctx.moveTo(canvas.width - 483 + 37.5 - 10.5, canvas.height - 294.5);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 10.5, canvas.height - 288);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7, canvas.height - 288);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7, canvas.height - 194);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 + 3, canvas.height - 194);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 + 3, canvas.height - 170);
+		ctx.moveTo(canvas.width - 483 + 37.5 - 13.5 + 3, canvas.height - 170);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 + 3, canvas.height - 178-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 1, canvas.height - 178-5);
+		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 - 1, canvas.height - 280);
 
 		ctx.stroke();
 		ctx.closePath();
+	}
 
+
+
+
+	//Szövegezés
+	ctx.beginPath();
+	
+	if (steps.includes("villanyoraszekreny")) {
+		ctx.fillText("Villanyóraszekrény", canvas.width - 250 * 2 + 35, canvas.height - 180 * 2 - 5);
+		ctx.fillText("Üres tokozat", canvas.width - 250 * 2  + 48, canvas.height - 145 - 60);
+	}
+
+	if (steps.includes("foldeloszonda")) {
+		ctx.fillText("Földelőszonda min. 2m mélyen a földben", canvas.width - 580 - 38, canvas.height - 60);
+	}
+
+	if (steps.includes("szondabekotes")) {
+		ctx.fillText("16mm2 z/s mkh", canvas.width - 560, canvas.height - 120);
+	}
+
+	if (steps.includes("mert_vezetek_osszekotes")) {
+
+	    ctx.font = "2px Arial";
+		ctx.fillText("min. 50cm", canvas.width - 518, canvas.height - 240);
+		
+		ctx.lineWidth = 0.1;
 		//Kék mért vezeték
 		ctx.beginPath();
 
-		ctx.strokeStyle = KEK;
-		ctx.moveTo(canvas.width - 483 + 38, canvas.height - 294.5);
-		ctx.lineTo(canvas.width - 483 + 38, canvas.height - 285);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5, canvas.height - 285);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5, canvas.height - 180);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 + 1, canvas.height - 180);
-		ctx.lineTo(canvas.width - 483 + 37.5 - 13.5 - 7 - 16.5 + 1, canvas.height - 170);
+		ctx.strokeStyle = SOTET;
+		ctx.moveTo(canvas.width - 525 + 2, canvas.height - 280);
+		ctx.lineTo(canvas.width - 492 + 10, canvas.height - 280);
+		ctx.lineTo(canvas.width - 525 + 6, canvas.height - 280);
+		ctx.lineTo(canvas.width - 525 + 6, canvas.height - 222.5);
+		ctx.lineTo(canvas.width - 525 + 2, canvas.height - 222.5);
+		ctx.lineTo(canvas.width - 492 + 10, canvas.height - 222.5);
+		ctx.lineTo(canvas.width - 525 + 6, canvas.height - 222.5);
+		ctx.lineTo(canvas.width - 525 + 6, canvas.height - 280);
 
 		ctx.stroke();
 		ctx.closePath();
 	}
 
+	//ctx.fillText("Lakáselosztó", canvas.width - 400 - 8.5 * 4 + 3 + (8.5 * 4), canvas.height - 150 * 2 + 147+3*4 - 23);
+	//ctx.fillText("Min. 10mm2 mkh vezeték", canvas.width - 400 - 8.5 * 4 + 3 + (8.5 * 4) - 95, canvas.height - 150 * 2 + 147+3*4 - 40);
+	
+	//ctx.fillText("PEN", canvas.width - 454, canvas.height - 300);
+	//ctx.fillText("L3", canvas.width - 460, canvas.height - 300);
+	//ctx.fillText("L2", canvas.width - 471, canvas.height - 300);
+	//ctx.fillText("L1", canvas.width - 481, canvas.height - 300);
+	
 
-
-
-	if (steps.includes("emasz_km")) {
-		//Szövegezés
-		ctx.beginPath();
-		
-		ctx.fillText("Lakáselosztó", canvas.width - 400 - 8.5 * 4 + 3 + (8.5 * 4), canvas.height - 150 * 2 + 147+3*4 - 23);
-		ctx.fillText("Min. 10mm2 mkh vezeték", canvas.width - 400 - 8.5 * 4 + 3 + (8.5 * 4) - 95, canvas.height - 150 * 2 + 147+3*4 - 40);
-		
-		ctx.fillText("PEN", canvas.width - 454, canvas.height - 300);
-		ctx.fillText("L3", canvas.width - 460, canvas.height - 300);
-		ctx.fillText("L2", canvas.width - 471, canvas.height - 300);
-		ctx.fillText("L1", canvas.width - 481, canvas.height - 300);
-		ctx.fillText("Földelőszonda min 2m.", canvas.width - 580, canvas.height - 60);
-		ctx.fillText("Villanyóraszekrény", canvas.width - 250 * 2 - 3, canvas.height - 180 * 2 - 5);
-		ctx.fillText("Üres tokozat", canvas.width - 250 * 2 - 3, canvas.height - 145 - 60);
-		
-		ctx.fillText("16mm2 z/s mkh", canvas.width - 560, canvas.height - 120);
-
-		ctx.stroke();
-		ctx.closePath();
-	}
+	ctx.stroke();
+	ctx.closePath();
 
 
 }

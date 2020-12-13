@@ -9,8 +9,66 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+		<div class="bar">
+			<ul>
+				<li step='0'>Villanyóraszekrény elhelyezése</li>
+				<li step='1'>Földelőszonda leütése</li>
+				<li step='2'>Sorkapocs berakása</li>
+				<li step='3'>Földelő szonda bekötése</li>
+				<li step='4'>Nullázás</li>
+				<li step="5">Mért fővezetékkel felállás</li>
+				<li step='6'>Kismegszakítók felhelyezése</li>
+				<!-- <li step='6'>Beállás a lakáselosztóba</li>-->
+				<li step='7'>Méretlen fővezeték</li>
+				<li step='8'>Szolgáltató elhelyezi a mérőórát</li>
+			</ul>
+			<button class="pre" disabled="">Vissza</button>
+			<button class="next">Következő</button>
+		</div>
 		<canvas id="canvas"></canvas>
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<script src="core.js" await></script>
 	<script src="script.js"></script>
+
+	<script type="text/javascript">
+		let step = 0,
+		step_sorrend = [
+			"villanyoraszekreny",
+			"foldeloszonda",
+			"sorkapocselhelyezese",
+			"szondabekotes",
+			"nullazas",
+			"mert_vezetek_osszekotes",
+			"emasz_km",
+			//"beallas",
+			"meretlek_vezetek_osszekotes",
+			"emasz_meroora",
+		];
+
+		$(".next").click((e) => {
+			console.log('next', step);
+			$(".pre").prop('disabled', false);
+			$(".bar ul li[step=" + step + "]").addClass('active');
+			steps.push(step_sorrend[step]);
+
+			if (step == ($(".bar ul li").length - 1 )) {
+				$(e.target).prop('disabled', true);
+			}
+			step++;
+		});
+
+		$(".pre").click((e) => {
+			step--;
+			console.log('pre', step);
+			if (step == 0) {
+				$(e.target).prop('disabled', true);
+			}
+			$(".next").prop('disabled', false);
+			steps.splice(step, 1)
+			
+			$(".bar ul li[step=" + step + "]").removeClass('active');
+		});
+	</script>
 </html>
